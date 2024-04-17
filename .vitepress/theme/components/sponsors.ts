@@ -31,8 +31,21 @@ export const pending = ref<boolean>(false)
 export const base = `https://sponsors.vuejs.org`
 
 export const load = async () => {
+  delAds()
   if (!pending.value) {
     pending.value = true
     data.value = await (await fetch(`${base}/data.json`)).json()
   }
 }
+
+export function delAds() {
+  const content = document.querySelector('.VPContentDoc') as HTMLDivElement
+  const aside = content.querySelector('.container>.aside>.aside-container') as HTMLDivElement
+
+  const child = aside.querySelector('.VPContentDocOutline')
+  aside.innerHTML = `<div class='VPContentDocOutline'>${child?.innerHTML}</div>`
+  // for (let node of aside.childNodes) {
+  //   if(child!==node) aside.removeChild(node);
+  // }
+}
+
