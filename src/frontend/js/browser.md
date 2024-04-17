@@ -1,8 +1,9 @@
-[TOC]
+- 用XMLHttpRequest读去本地或服务器文件内容
+  [TOC]
 ## window
-- 窗口位置 screenLeft  srceenTop 
-- 窗口操作(存在安全限制) moveTo moveBy open close resizeTo 
-- 窗口大小 outerHeight outerWidth 
+- 窗口位置 screenLeft  srceenTop
+- 窗口操作(存在安全限制) moveTo moveBy open close resizeTo
+- 窗口大小 outerHeight outerWidth
 - 视口viewport大小  innerWidth innerHeight
 - 视口位置 scrollBy scrollTo
 - 对话框 alert confirm prompt

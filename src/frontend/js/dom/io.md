@@ -8,3 +8,12 @@ let blobStr = await blob.text();
 let blob2 = new Blob([blobStr], {type: blob.type })
 
 ```
+
+
+
+## 参考
+- [JavaScript 如何读取本地文件](https://zhuanlan.zhihu.com/p/145520037)
+- [文件](https://cloud.tencent.com/developer/article/1392736)
+
+  
+

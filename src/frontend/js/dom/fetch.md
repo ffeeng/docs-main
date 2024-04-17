@@ -1,13 +1,12 @@
 ## fetch
 
-
 ## 请求库
 ### 浏览器端使用
 - XMLHttpRequest
-- axios 
+- axios
 - fetch
 ### node中使用
-- [axios](https://github.com/axios/axios) 
+- [axios](https://github.com/axios/axios)
 - [node-fetch](https://github.com/node-fetch/node-fetch)
 - [request](https://github.com/request/request)
 
@@ -22,15 +21,15 @@
 ### get请求
 
 - fetch
-```javascript
-let param = new URLSearchParams({
-  roomId:1,
-  uid:'1',
-})
-let url = 'http://localhost:3000/v3/checkin'+'?'+param.toString();
-fetch(url).then(response => response.json())
-  .then(data => console.log(data));
-```
+  ```js
+  let param = new URLSearchParams({
+    roomId:1,
+    uid:'1',
+  })
+  let url = 'http://localhost:3000/v3/checkin'+'?'+param.toString();
+  fetch(url).then(response => response.json())
+    .then(data => console.log(data));
+  ```
 
 - axios
 ```javascript
@@ -61,14 +60,14 @@ fetch(url, {
 }).then(response => response.json())
     .then(data => console.log(data));
 ```
-注意Body类型<br>
-Body = Blob | BufferSource | FormData | URLSearchParams | ReadableStream<Uint8Array> | string;<br>
+注意Body类型
+```Body = Blob | BufferSource | FormData | URLSearchParams | ReadableStream<Uint8Array> | string;```
 Body不能为对象,需用 JSON.stringify(data)
 
 - axios
-```javascript
+``` js
 let url = 'http://localhost:3000/v3/checkin';
-axios.request( {
+axios.request({
     url,
     method: 'POST', 
     data:{
@@ -115,7 +114,7 @@ axios.request( {
 
 ## 参考文件
 - [Fetch API 教程](http://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
-- [axios](https://github.com/axios/axios) 
+- [axios](https://github.com/axios/axios)
 - [node-fetch](https://github.com/node-fetch/node-fetch)
 - [request](https://github.com/request/request)
 - [FormData](https://github.com/form-data/form-data#buffer-getbuffer)

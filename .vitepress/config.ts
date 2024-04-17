@@ -45,12 +45,6 @@ const nav: ThemeConfig['nav'] = [
     activeMatch: `^/api/`,
     link: '/api/'
   },
-
-  {
-    text: 'API',
-    activeMatch: `^/api/`,
-    link: '/api/'
-  },
   {
     text: 'Playground',
     link: 'https://play.vuejs.org'
@@ -65,16 +59,33 @@ export const sidebar: ThemeConfig['sidebar'] = {
         { text: '样式', link: '/frontend/html/link' },
         { text: '元数据', link: '/frontend/html/meta' },
         { text: '脚本', link: '/frontend/html/script' },
-        { text: '存储', link: '/frontend/html/storage' }
+
       ]
     },
     {
       text: 'css',
       items: [
-        { text: '样式', link: '/frontend/html/link' },
-        { text: '元数据', link: '/frontend/html/meta' },
-        { text: '脚本', link: '/frontend/html/script' },
-        { text: '存储', link: '/frontend/html/storage' }
+        { text: '长度单位', link: '/frontend/css/length' },
+        { text: '设置样式', link: '/frontend/css/style' },
+        { text: 'flex布局', link: '/frontend/css/flex' },
+        { text: '动画', link: '/frontend/css/animate' },
+        { text: '特效', link: '/frontend/css/special' }
+      ]
+    }, {
+      text: 'js',
+      items: [
+        { text: 'unknow', link: '/frontend/js/unknow' },
+        { text: 'debug', link: '/frontend/js/debug' },
+        { text: '浏览器工作原理', link: '/frontend/js/browser' },
+        { text: '存储', link: '/frontend/js/storage' },
+        { text: '数组', link: '/frontend/js/array' },
+        { text: 'URL参数', link: '/frontend/js/dom/url' },
+        { text: 'fetch', link: '/frontend/js/dom/fetch' },
+        { text: 'dom', link: '/frontend/js/dom/dom' },
+        { text: 'event', link: '/frontend/js/dom/event' },
+        { text: 'web组件', link: '/frontend/js/dom/webComp' },
+        { text: '文件IO流', link: '/frontend/js/dom/io' },
+        { text: 'interview', link: '/frontend/js/interview' },
       ]
     }
 
