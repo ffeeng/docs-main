@@ -15,6 +15,7 @@ onMounted(() => {
 })
 
 const filtered = computed(() => {
+  debugger
   const q = normalize(query.value)
   const matches = (text: string) => normalize(text).includes(q)
 

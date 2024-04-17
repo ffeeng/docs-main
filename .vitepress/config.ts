@@ -18,27 +18,27 @@ const nav: ThemeConfig['nav'] = [
   {
     text: '前端',
     activeMatch: `^/frontend/`,
-    link: '/frontend/readme.md'
+    link: '/frontend/'
   },
   {
     text: '后端',
     activeMatch: `^/backend/`,
-    link: '/backend/readme.md'
+    link: '/backend/'
   },
   {
     text: '业务',
     activeMatch: `^/business/`,
-    link: '/business/readme.md'
+    link: '/business/'
   },
   {
     text: '运维',
     activeMatch: `^/devopts/`,
-    link: '/devopts/readme.md'
+    link: '/devopts/'
   },
   {
     text: '测试',
     activeMatch: `^/test/`,
-    link: '/test/readme.md'
+    link: '/test/'
   },
   {
     text: 'API',
@@ -83,12 +83,25 @@ export const sidebar: ThemeConfig['sidebar'] = {
     {
       text: 'mysql',
       items: [
-        { text: 'sql语法', link: '/backend/mysql/sql' },
+        { text: 'sql语法', link: '/backend/mysql/sql' }
 
       ]
-    },
+    }
   ],
 
+  '/api/': [
+    {
+      text: 'Global API',
+      items: [
+        { text: 'Application', link: '/api/application' },
+      ]
+    },
+    {
+      text: 'Composition API',
+      items: [
+        { text: 'setup()', link: '/api/composition-api-setup' },
+      ]
+    }]
 }
 
 // Placeholder of the i18n config for @vuejs-translations.
