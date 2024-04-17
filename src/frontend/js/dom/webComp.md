@@ -1,4 +1,4 @@
-[TOC]
+
 ## 影子dom例子
 
 ## template

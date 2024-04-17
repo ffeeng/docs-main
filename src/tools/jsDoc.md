@@ -1,4 +1,3 @@
-## jsDoc 注释
 * @name commit
 * @memberOf 
 * @static

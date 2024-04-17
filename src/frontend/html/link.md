@@ -1,4 +1,4 @@
-[TOC]
+
 ## 用法
 ```html
 <link rel=preload as=style href=css/chunk-vendors.793ef94c.css >

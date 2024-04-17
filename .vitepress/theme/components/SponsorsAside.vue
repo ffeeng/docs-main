@@ -5,7 +5,7 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <div v-if="frontmatter.sponsors !== false">
+  <div v-if="frontmatter.sponsors === false">
     <a class="sponsors-aside-text" href="/sponsor/">Sponsors</a>
     <SponsorsGroup tier="special" />
     <SponsorsGroup tier="platinum" />
@@ -21,5 +21,8 @@ a.sponsors-aside-text {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
+}
+.VPCarbonAds{
+  display:none;
 }
 </style>

@@ -75,27 +75,60 @@ export const sidebar: ThemeConfig['sidebar'] = {
       text: 'js',
       items: [
         { text: 'unknow', link: '/frontend/js/unknow' },
+        { text: '数组', link: '/frontend/js/ecma/arr' },
+        { text: '函数', link: '/frontend/js/ecma/fun' },
+        { text: 'api', link: '/frontend/js/ecma/api' },
+        { text: '集合', link: '/frontend/js/ecma/set' },
+        { text: '字符串', link: '/frontend/js/ecma/string' },
+        { text: 'Promise', link: '/frontend/js/ecma/promise' },
+        { text: 'fetch', link: '/frontend/js/dom/fetch' },
         { text: 'debug', link: '/frontend/js/debug' },
         { text: '浏览器工作原理', link: '/frontend/js/browser' },
         { text: '存储', link: '/frontend/js/storage' },
-        { text: '数组', link: '/frontend/js/array' },
         { text: 'URL参数', link: '/frontend/js/dom/url' },
-        { text: 'fetch', link: '/frontend/js/dom/fetch' },
         { text: 'dom', link: '/frontend/js/dom/dom' },
         { text: 'event', link: '/frontend/js/dom/event' },
         { text: 'web组件', link: '/frontend/js/dom/webComp' },
         { text: '文件IO流', link: '/frontend/js/dom/io' },
-        { text: 'interview', link: '/frontend/js/interview' },
+        { text: '基本语法面试', link: '/frontend/js/interview-base' },
+        { text: '工程化面试', link: '/frontend/js/interview-tool' },
+        { text: '其他', link: '/frontend/js/ecma/other' }
+
+      ]
+    },
+    {
+      text: 'vue',
+      items: [
+        { text: 'vue2', link: '/frontend/vue/vue2' },
+        { text: 'vue2源码', link: '/frontend/vue/vue2_source' },
+        { text: 'vue3', link: '/frontend/vue/vue3' },
+        { text: 'vue3提案', link: '/frontend/vue/vue3_rfcs' },
+        { text: 'vueRouter', link: '/frontend/vue/vue_router' }
+      ]
+    },
+    {
+      text: 'react',
+      items: [
+        { text: '基本', link: '/frontend/react/base' }
+      ]
+    },
+    {
+      text: '三方库',
+      items: [
+        { text: 'axios', link: '/frontend/lib/axios' },
+        { text: 'jquery', link: '/frontend/lib/jquery' },
+        { text: '微信小程序', link: '/frontend/lib/wx_mini' }
       ]
     }
 
   ],
   '/backend/': [
     {
-      text: 'mysql',
+      text: '后端',
       items: [
-        { text: 'sql语法', link: '/backend/mysql/sql' }
-
+        { text: 'mysql', link: '/backend/mysql/base' },
+        { text: '网络基础', link: '/backend/net/index' },
+        { text: 'http协议', link: '/backend/net/http' }
       ]
     }
   ],
@@ -104,7 +137,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
     {
       text: 'Global API',
       items: [
-        { text: 'Application', link: '/api/application' },
+        { text: 'Application', link: '/api/application' }
       ]
     },
     {
@@ -116,12 +149,12 @@ export const sidebar: ThemeConfig['sidebar'] = {
 }
 
 // Placeholder of the i18n config for @vuejs-translations.
-// const i18n: ThemeConfig['i18n'] = {
-// }
+const i18n: ThemeConfig['i18n'] = {
+  toc: '本页目录'
+}
 
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
-
   lang: 'en-US',
   title: 'Vue.js',
   description: 'Vue.js - The Progressive JavaScript Framework',
@@ -186,14 +219,14 @@ export default defineConfigWithTheme<ThemeConfig>({
     nav,
     sidebar,
     // Placeholder of the i18n config for @vuejs-translations.
-    // i18n,
+    i18n,
 
     localeLinks: [
       {
         link: 'https://cn.vuejs.org',
         text: '简体中文',
         repo: 'https://github.com/vuejs-translations/docs-zh-cn'
-      },
+      }
     ],
 
     algolia: {
@@ -216,7 +249,7 @@ export default defineConfigWithTheme<ThemeConfig>({
 
     editLink: {
       repo: 'ffeeng/note',
-      text: 'Edit this page on GitHub'
+      text: '在 GitHub 上编辑此页面'
     },
 
     footer: {

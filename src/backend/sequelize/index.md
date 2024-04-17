@@ -112,7 +112,7 @@ export class UsersService {
 }
 ```
 
-## 参考
+### 参考
 
 [nest中使用数据库](https://docs.nestjs.com/techniques/database#sequelize-integration)
 [sequelize官方文档](https://sequelize.org/master/)

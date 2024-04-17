@@ -1,5 +1,5 @@
 - 用XMLHttpRequest读去本地或服务器文件内容
-  [TOC]
+  
 ## window
 - 窗口位置 screenLeft  srceenTop
 - 窗口操作(存在安全限制) moveTo moveBy open close resizeTo
