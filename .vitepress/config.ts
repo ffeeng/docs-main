@@ -32,8 +32,8 @@ const nav: ThemeConfig['nav'] = [
   },
   {
     text: '运维',
-    activeMatch: `^/devopts/`,
-    link: '/devopts/'
+    activeMatch: `^/devops/`,
+    link: '/devops/'
   },
   {
     text: '测试',
@@ -129,6 +129,32 @@ export const sidebar: ThemeConfig['sidebar'] = {
         { text: 'mysql', link: '/backend/mysql/base' },
         { text: '网络基础', link: '/backend/net/index' },
         { text: 'http协议', link: '/backend/net/http' }
+      ]
+    }
+  ],
+
+  '/business/': [
+    {
+      text: '业务',
+      items: [
+        { text: 'sentry', link: '/business/sentry' },
+        { text: 'playwright', link: '/business/playwright' }
+      ]
+    }
+  ],
+
+  '/devops/': [
+    {
+      text: '运维',
+      items: [
+        { text: '常用指令', link: '/devops/index' },
+        { text: 'nginx', link: '/devops/nginx' },
+        { text: '端口', link: '/devops/port' },
+        { text: '进程管理', link: '/devops/pm2' },
+        { text: '版本管理', link: '/devops/versions' },
+        { text: '包管理', link: '/devops/yum' },
+        { text: '部署', link: '/devops/deploy' },
+        { text: '构建', link: '/devops/jenkins' }
       ]
     }
   ],

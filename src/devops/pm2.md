@@ -1,10 +1,9 @@
 ## PM2
 
 - 安装
-
 `node i -g pm2`
 
-## 常用命令
+### 常用命令
 
 ```shell
 pm2 start pm2-config.json
@@ -14,8 +13,7 @@ pm2 delete 1 2
 pm2 log 1 2
 ```
 
-## config
-
+### config
 ```shell
 {
     "apps": {

@@ -1,5 +1,3 @@
-[TOC]
-
 ## 介绍
 Jenkins 是基本java开发的打包工具
 
@@ -21,10 +19,5 @@ Jenkins 是基本java开发的打包工具
 
 - 开始构建
 
-  
-
-
-
 ## 参考
-
 - [官网 jenkins](https://www.jenkins.io/)

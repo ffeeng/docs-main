@@ -1,49 +1,31 @@
-## mac安装nginx
-1. 安装brew命令
+## mac nginx常见命令
 
-`ruby -e ``"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- 安装卸载
+`brew install nginx` 
+`brew uninstall nginx` 
 
-- 若出现报错信息
-
-`Failed to connect to raw.githubusercontent.com port 443: Connection refused`
-
-- 需要修改/etc/hosts文件，添加
-
-`199.232.28.133 raw.githubusercontent.com`
-
-- 重新执行，安装brew命令
-
-- 若提示指令过期，执行
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-
-
-
-2. 简单安装方法：`/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"`
-
-3. 安装nginx
-
-`brew install nginx`
-
-4. 启动nginx
-
-`sudo nginx`
-
-5. 常用命令
-
-```
-nginx -s 指令
+- 常用指令
+```bash
+sudo nginx  
+nginx -t
+nginx -help
+nginx -s reload
+nginx -s stop
 ```
 
-- `stop` — fast shutdown
-- `quit` — graceful shutdown
-- `reload` — reloading the configuration file
-- `reopen` — reopening the log files
-6. 配置文件路径
+## linux nginx常用命令
 
-`/usr/local/etc/nginx/nginx.conf`
+```bash
+nginx -t
+nginx -s reload
 
-7. 示例
+systemctl stop nginx
+systemctl restart nginx
+systemctl status nginx
+```
 
+
+## 常见业务示例
 ```nginx
 server {
     listen       8080;
@@ -106,19 +88,6 @@ server {
     #}
 }
 ```
-
-## linux上nginx 常用命令
-
-```shell
-nginx -t
-nginx -s reload
-
-systemctl stop nginx
-systemctl restart nginx
-systemctl status nginx
-```
-
-​    
 
 ### 参考
 - [nginx指令](https://nginx.org/en/docs/dirindex.html)

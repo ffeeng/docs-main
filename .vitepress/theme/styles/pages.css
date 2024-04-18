@@ -13,3 +13,7 @@
 .vt-doc.sponsor h3 .header-anchor {
   display: none;
 }
+
+.vt-doc h2 {
+  margin: 1rem 0 !important;
+}
