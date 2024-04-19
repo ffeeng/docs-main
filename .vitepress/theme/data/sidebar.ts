@@ -3,12 +3,16 @@ import { Config as ThemeConfig } from '@vue/theme/src/vitepress/config'
 export const sidebar: ThemeConfig['sidebar'] = {
   '/frontend/': [
     {
+      text: '前端', items: [
+        { text: '', link: '/frontend/index' }
+      ]
+    },
+    {
       text: 'html',
       items: [
         { text: '样式', link: '/frontend/html/link' },
         { text: '元数据', link: '/frontend/html/meta' },
-        { text: '脚本', link: '/frontend/html/script' },
-
+        { text: '脚本', link: '/frontend/html/script' }
       ]
     },
     {
@@ -74,6 +78,11 @@ export const sidebar: ThemeConfig['sidebar'] = {
   ],
   '/backend/': [
     {
+      text: '后端', items: [
+        { text: '', link: '/backend/index' }
+      ]
+    },
+    {
       text: '后端',
       items: [
         { text: 'mysql', link: '/backend/mysql/base' },
@@ -85,18 +94,27 @@ export const sidebar: ThemeConfig['sidebar'] = {
 
   '/business/': [
     {
+      text: '业务', items: [
+        { text: '', link: '/business/index' }
+      ]
+    },
+    {
       text: '业务',
       items: [
         { text: 'sentry接入', link: '/business/sentry' },
         { text: 'playwright教程', link: '/business/playwright' },
         { text: 'ai业务', link: '/business/ai' },
-        { text: '工作流程', link: '/business/workflow' },
-
+        { text: '工作流程', link: '/business/workflow' }
       ]
     }
   ],
 
   '/devops/': [
+    {
+      text: '运维', items: [
+        { text: '', link: '/devops/index' }
+      ]
+    },
     {
       text: '运维',
       items: [

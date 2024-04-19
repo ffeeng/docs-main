@@ -76,6 +76,7 @@ const searchDataSourcePlugin = function () {
     load(id: string) {
       if (id === resolvedVirtualModuleId) {
         const data = getSearchDataSource()
+        console.log(data)
         return `export default ${JSON.stringify(data)}`
       }
     }
