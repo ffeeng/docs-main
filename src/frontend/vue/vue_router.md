@@ -1,21 +1,21 @@
 
 ## location
 在浏览器地址栏输入的路径是修改href或者hash
-![location](../../images/vue/location1.png)
+
+[//]: # (![location]&#40;../../images/vue/location1.png&#41;)
 为什么不对href的hash进行拦截，用defineProperty定义get set方法？
-![location](../../images/vue/location2.png)
+
+[//]: # (![location]&#40;../../images/vue/location2.png&#41;)
 因为location的herf和hash属性都是不配置的，不能对其进行defineProperty定义get set方法
 
 ## hash路由
 当hash发生改变时会触发window.onhashchange方法调用，传入HashChangeEvent事件
 `window.onhashchange=function(e){console.log(e)}`
-![location](../../images/vue/hashchange.png)
 
 
 ## history路由
 当在浏览器地址栏点击前进后退时会触发window.onpopstate方法调用，传入PopStateEvent事件
 调用history.go(1) history.forward() history.back()都会触发onpopstate方法调用。
-![location](../../images/vue/popstate.png)
 
 ## vue-router原理
 vue-router插件是基于vue，在vue原型上加了$route $router两个属性，全局注册两个组件

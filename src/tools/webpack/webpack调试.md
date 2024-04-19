@@ -23,4 +23,4 @@ node --inspect-brk ./node_modules/webpack/bin/webpack.js --inline --progress
 
 - 打开Chrome浏览器，地址栏里输入chrome://inspect/#devices：
 
-![webpack调试](C:\Users\94963\Desktop\note\img\webpack调试.jpg)
+[//]: # (![webpack调试]&#40;C:\Users\94963\Desktop\note\img\webpack调试.jpg&#41;)

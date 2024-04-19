@@ -32,10 +32,14 @@
     <div class="footer__spacer"></div>
     <div class="footer__power">
       <span>blog</span>
-      <img src="/webOffice_logo.png" alt="logo" />
+<!--      <img :src="logo" alt="logo" />-->
     </div>
   </footer>
 </template>
+
+<script setup>
+
+</script>
 
 <style lang="less" scoped>
 .footer {

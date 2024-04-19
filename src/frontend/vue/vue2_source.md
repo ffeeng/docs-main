@@ -121,7 +121,7 @@ vue中的 插值表达式、 v-if 、v-for、 v-modul 、sync、 v-html 、v-tex
 
 生成的render方法为
 
-![render工具方法](../../images/vue/render工具方法.png)
+[//]: # (![render工具方法]&#40;../../images/vue/render工具方法.png&#41;)
 
 ```js
 function createElement(
@@ -398,11 +398,12 @@ oldVnode[2]执行删除操作
 ## vue源码中dom操作
 
 ### 基本dom操作
-![基本Dom操作](../../images/broswer/基本Dom操作.png)
+
+[//]: # (![基本Dom操作]&#40;../../images/broswer/基本Dom操作.png&#41;)
 
 ### vue中组件更新操作
 
-![vue更新组件操作](../../images/vue/vue更新组件操作.png)
+[//]: # (![vue更新组件操作]&#40;../../images/vue/vue更新组件操作.png&#41;)
 
 
 
