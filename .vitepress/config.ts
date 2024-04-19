@@ -6,6 +6,7 @@ import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
 // import { textAdPlugin } from './textAdMdPlugin'
 import { fileURLToPath, URL } from 'node:url'
+// import getSearchDataSource from './utils/getSearchDataSource'
 
 const nav: ThemeConfig['nav'] = [
   // {
@@ -184,6 +185,26 @@ const i18n: ThemeConfig['i18n'] = {
   toc: '本页目录'
 }
 
+const searchDataSourcePlugin = function () {
+  const virtualModuleId = 'virtual:search-data-source-module'
+  const resolvedVirtualModuleId = '\0' + virtualModuleId
+
+  return {
+    name: 'search-data-source-plugin', // 必须的，将会在 warning 和 error 中显示
+    resolveId(id: string) {
+      if (id === virtualModuleId) {
+        return resolvedVirtualModuleId
+      }
+    },
+    load(id: string) {
+      if (id === resolvedVirtualModuleId) {
+        const data = getSearchDataSource()
+        return `export default ${JSON.stringify(data)}`
+      }
+    }
+  }
+}
+
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
   lang: 'en-US',
@@ -194,56 +215,6 @@ export default defineConfigWithTheme<ThemeConfig>({
 
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
-    ['meta', { property: 'og:url', content: 'https://vuejs.org/' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Vue.js' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: 'Vue.js - The Progressive JavaScript Framework'
-      }
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image',
-        content: 'https://vuejs.org/images/logo.png'
-      }
-    ],
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'link',
-      {
-        rel: 'preconnect',
-        href: 'https://sponsors.vuejs.org'
-      }
-    ],
-    [
-      'script',
-      {},
-      fs.readFileSync(
-        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
-        'utf-8'
-      )
-    ],
-    [
-      'script',
-      {
-        src: 'https://cdn.usefathom.com/script.js',
-        'data-site': 'XNOLWPLB',
-        'data-spa': 'auto',
-        defer: ''
-      }
-    ],
-    [
-      'script',
-      {
-        src: 'https://vueschool.io/banner.js?affiliate=vuejs&type=top',
-        async: 'true'
-      }
-    ]
   ],
 
   themeConfig: {
@@ -292,6 +263,10 @@ export default defineConfigWithTheme<ThemeConfig>({
     }
   },
 
+  // plugins:[
+  //   searchDataSourcePlugin()
+  // ]
+
   markdown: {
     theme: 'github-dark',
     config(md) {
@@ -303,12 +278,12 @@ export default defineConfigWithTheme<ThemeConfig>({
   vite: {
     resolve: {
       alias: [
-        // {
-        //   find: /^.*\/VPNavBarSearch\.vue$/,
-        //   replacement: fileURLToPath(
-        //     new URL('./components/Home.vue', import.meta.url)
-        //   )
-        // }
+        {
+          find: /^.*\/VPNavBarSearch\.vue$/,
+          replacement: fileURLToPath(
+            new URL('/Users/fengqian/WebstormProjects/docs-main/.vitepress/theme/components/VPNavBarSearch.vue', import.meta.url)
+          )
+        }
       ]
     },
     define: {
