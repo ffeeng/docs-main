@@ -44,30 +44,25 @@ export namespace Search {
   }
   export enum GroupType {
     // 产品介绍
-    Product,
+    Frontend,
     // 控制台
-    Console,
+    Backend,
     // Web SDK
-    WebSDK,
+    Business,
     // callback
-    Callback,
-    // API
-    API,
-    // question
-    Question,
-    // Log
-    Log
+    Devops,
+
   }
   export enum TextType {
     // 页面
-    Page,
+    Page='page',
     // 标题
-    Title,
+    Title='title',
     // 文本
-    Text,
+    Text='text',
     // 表格
-    Table,
+    Table='table',
     // 代码
-    Code
+    Code='code'
   }
 }

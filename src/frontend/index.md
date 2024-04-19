@@ -2,7 +2,7 @@
 
 
 ## 基本业务
-###. 写页面
+### 写页面
 - 简单页面 vue + Dom
 - 表格 element-UI
 - 表单 element-UI

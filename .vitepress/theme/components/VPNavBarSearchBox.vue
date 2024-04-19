@@ -30,7 +30,7 @@
 import VPNavBarSearchBoxHeader from './VPNavBarSearchBoxHeader.vue'
 import VPNavBarSearchBoxMain from './VPNavBarSearchBoxMain.vue'
 import VPNavBarSearchBoxFooter from './VPNavBarSearchBoxFooter.vue'
-import { Search } from '../../search.d'
+import { Search } from '../data/search.d'
 import {
   ref,
   computed,
@@ -48,13 +48,10 @@ const keyword = ref('')
 const loadingData = ref(false)
 const datasource = shallowRef<Search.Item[]>([])
 const groupLimit = reactive({
-  [Search.GroupType.Product]: DEFAULT_LIMIT,
-  [Search.GroupType.Console]: DEFAULT_LIMIT,
-  [Search.GroupType.WebSDK]: DEFAULT_LIMIT,
-  [Search.GroupType.Callback]: DEFAULT_LIMIT,
-  [Search.GroupType.API]: DEFAULT_LIMIT,
-  [Search.GroupType.Question]: DEFAULT_LIMIT,
-  [Search.GroupType.Log]: DEFAULT_LIMIT,
+  [Search.GroupType.Frontend]: DEFAULT_LIMIT,
+  [Search.GroupType.Backend]: DEFAULT_LIMIT,
+  [Search.GroupType.Business]: DEFAULT_LIMIT,
+  [Search.GroupType.Devops]: DEFAULT_LIMIT
 })
 let rootScrollType = ''
 
@@ -68,17 +65,15 @@ const value = computed({
 })
 const groups = computed(() => {
   const result: Search.Group[] = [
-    { text: '产品介绍', type: Search.GroupType.Product, items: [] },
-    { text: '控制台', type: Search.GroupType.Console, items: [] },
-    { text: '服务端回调', type: Search.GroupType.Callback, items: [] },
-    { text: '前端SDK', type: Search.GroupType.WebSDK, items: [] },
-    { text: 'API文档', type: Search.GroupType.API, items: [] },
-    { text: '常见问题', type: Search.GroupType.Question, items: [] },
-    { text: '更新日志', type: Search.GroupType.Log, items: [] }
+    { text: '前端', type: Search.GroupType.Frontend, items: [] },
+    { text: '后端', type: Search.GroupType.Backend, items: [] },
+    { text: '业务', type: Search.GroupType.Business, items: [] },
+    { text: '运维', type: Search.GroupType.Devops, items: [] }
   ]
 
   if (keyword.value) {
     for (const item of datasource.value) {
+      console.log(item.text, keyword.value, 11)
       if (item.text.toLowerCase().includes(keyword.value.toLowerCase())) {
         const targetGroup = result.find(group => group.type === item.groupType)
 
@@ -110,9 +105,9 @@ const stop = watchEffect(async () => {
 
   try {
     loadingData.value = true
-    // const resp = await import('virtual:search-data-source-module')
-    // datasource.value = resp.default
-    datasource.value = []
+    const resp = await import('virtual:search-data-source-module')
+    datasource.value = resp.default
+    // datasource.value = []
     stop()
   } catch (error) {
     console.warn(error)

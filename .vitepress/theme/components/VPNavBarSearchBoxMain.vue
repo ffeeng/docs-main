@@ -64,7 +64,7 @@ import VPIconAlignDown from './icons/VPIconAlignDown.vue'
 import VPNavBarSearchBoxMainPlaceholder from './VPNavBarSearchBoxMainPlaceholder.vue'
 import { shallowRef, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter, useRoute, withBase } from 'vitepress'
-import { Search } from '../../search.d'
+import { Search } from '../data/search.d'
 
 const mouseEnterPoint = {
   x: 0,
