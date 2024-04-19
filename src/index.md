@@ -1,12 +1,5 @@
 # 技术总结
-## [html](./html)
-## [css](./css)
-## [js](./js)
-## [vue](./vue)
-## [react](./react)
-## [webpack](./webpack)
-## [网络](./网络)
-## [工具链](./工具链)
+## [md语法](https://markdown.com.cn/intro.html)
 
 
 ## 学习步骤由浅入深

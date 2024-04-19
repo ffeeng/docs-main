@@ -4,3 +4,19 @@
 @import "./inline-demo.css";
 @import "./utilities.css";
 @import "./style-guide.css";
+
+
+.vt-doc div[class*='language-'] {
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.vt-doc h1 {
+  margin-bottom: 1.5rem;
+}
+.vt-doc h2 {
+  margin: 1rem 0;
+}
+.vt-doc h3 {
+  margin: 1rem 0;
+}

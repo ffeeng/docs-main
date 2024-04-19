@@ -5,6 +5,7 @@ import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
 // import { textAdPlugin } from './textAdMdPlugin'
+import { fileURLToPath, URL } from 'node:url'
 
 const nav: ThemeConfig['nav'] = [
   // {
@@ -103,7 +104,8 @@ export const sidebar: ThemeConfig['sidebar'] = {
         { text: 'vue2源码', link: '/frontend/vue/vue2_source' },
         { text: 'vue3', link: '/frontend/vue/vue3' },
         { text: 'vue3提案', link: '/frontend/vue/vue3_rfcs' },
-        { text: 'vueRouter', link: '/frontend/vue/vue_router' }
+        { text: 'vueRouter', link: '/frontend/vue/vue_router' },
+        { text: 'extendable', link: '/frontend/vue/extendable' },
       ]
     },
     {
@@ -137,8 +139,11 @@ export const sidebar: ThemeConfig['sidebar'] = {
     {
       text: '业务',
       items: [
-        { text: 'sentry', link: '/business/sentry' },
-        { text: 'playwright', link: '/business/playwright' }
+        { text: 'sentry接入', link: '/business/sentry' },
+        { text: 'playwright教程', link: '/business/playwright' },
+        { text: 'ai业务', link: '/business/ai' },
+        { text: '工作流程', link: '/business/workflow' },
+
       ]
     }
   ],
@@ -296,6 +301,16 @@ export default defineConfigWithTheme<ThemeConfig>({
   },
 
   vite: {
+    resolve: {
+      alias: [
+        // {
+        //   find: /^.*\/VPNavBarSearch\.vue$/,
+        //   replacement: fileURLToPath(
+        //     new URL('./components/Home.vue', import.meta.url)
+        //   )
+        // }
+      ]
+    },
     define: {
       __VUE_OPTIONS_API__: false
     },
