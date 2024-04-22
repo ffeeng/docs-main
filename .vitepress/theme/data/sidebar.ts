@@ -4,7 +4,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
   '/frontend/': [
     {
       text: '前端', items: [
-        { text: '', link: '/frontend/index' }
+        { text: '概要', link: '/frontend/index' }
       ]
     },
     {
@@ -74,17 +74,12 @@ export const sidebar: ThemeConfig['sidebar'] = {
         { text: '微信小程序', link: '/frontend/lib/wx_mini' }
       ]
     }
-
   ],
   '/backend/': [
     {
-      text: '后端', items: [
-        { text: '', link: '/backend/index' }
-      ]
-    },
-    {
       text: '后端',
       items: [
+        { text: '概要', link: '/backend/index' },
         { text: 'mysql', link: '/backend/mysql/base' },
         { text: '网络基础', link: '/backend/net/index' },
         { text: 'http协议', link: '/backend/net/http' }
@@ -94,12 +89,12 @@ export const sidebar: ThemeConfig['sidebar'] = {
 
   '/business/': [
     {
-      text: '业务', items: [
-        { text: '', link: '/business/index' }
+      text: '', items: [
+        { text: '业务', link: '/business/index' }
       ]
     },
     {
-      text: '业务',
+      text: '',
       items: [
         { text: 'sentry接入', link: '/business/sentry' },
         { text: 'playwright教程', link: '/business/playwright' },
@@ -110,11 +105,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
   ],
 
   '/devops/': [
-    {
-      text: '运维', items: [
-        { text: '', link: '/devops/index' }
-      ]
-    },
+
     {
       text: '运维',
       items: [

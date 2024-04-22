@@ -39,16 +39,16 @@ const nav: ThemeConfig['nav'] = [
     activeMatch: `^/devops/`,
     link: '/devops/'
   },
-  {
-    text: '测试',
-    activeMatch: `^/test/`,
-    link: '/test/'
-  },
-  {
-    text: 'API',
-    activeMatch: `^/api/`,
-    link: '/api/'
-  },
+  // {
+  //   text: '测试',
+  //   activeMatch: `^/test/`,
+  //   link: '/test/'
+  // },
+  // {
+  //   text: 'API',
+  //   activeMatch: `^/api/`,
+  //   link: '/api/'
+  // },
   {
     text: 'Playground',
     link: 'https://play.vuejs.org'
