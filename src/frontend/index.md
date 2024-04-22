@@ -1,41 +1,39 @@
 # 这是前端内容
 
-
 ## 基本业务
 ### 写页面
 - 简单页面 vue + Dom
 - 表格 element-UI
 - 表单 element-UI
 - 路由 vue-router
-  ###. 联调接口
+### 联调接口
 - axios
-  ###. 国际化
+### 国际化
 - i18N
-  ###. 换肤
+###  换肤
 - CSS样式层叠 变量 预编译
 - [前端换肤的N种方案](https://cloud.tencent.com/developer/article/1652624)
-  ###. 兼容适配
+### 兼容适配
 - 浏览器兼容性
 1. js polyfill.js
 2. css reset
 3. 设置浏览器私有属性指令
-
 - 屏幕适配
-1. ua解析
+1. ua解析 mobilejs
 2. 弹性布局
 3. em rem vw vh
 
 ## 性能优化
 
-###. 减少http请求
+### 减少http请求
 - css,js文件合并
 - 精灵兔
 - 字体图标
 - base64图片
-  ###. 域解析
+### 域解析
 - dns-prefetch
 - link元素 prefetch preload
-  ###. 减少体积
+### 减少体积
 - css压缩，js压缩
 - gzip
 ### 缓存
@@ -63,4 +61,5 @@
 ## 可视化业务
 ### 统计图，报表
 ### 动画、特效
+
 

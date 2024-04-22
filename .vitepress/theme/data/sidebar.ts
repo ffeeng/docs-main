@@ -96,6 +96,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
     {
       text: '',
       items: [
+        { text: 'whistle代理', link: '/business/whistle' },
         { text: 'sentry接入', link: '/business/sentry' },
         { text: 'playwright教程', link: '/business/playwright' },
         { text: 'ai业务', link: '/business/ai' },
@@ -105,7 +106,6 @@ export const sidebar: ThemeConfig['sidebar'] = {
   ],
 
   '/devops/': [
-
     {
       text: '运维',
       items: [
@@ -117,6 +117,15 @@ export const sidebar: ThemeConfig['sidebar'] = {
         { text: '包管理', link: '/devops/yum' },
         { text: '部署', link: '/devops/deploy' },
         { text: '构建', link: '/devops/jenkins' }
+      ]
+    }
+  ],
+
+  '/api/': [
+    {
+      text: '',
+      items: [
+        { text: 'api', link: '/api/index' }
       ]
     }
   ],
