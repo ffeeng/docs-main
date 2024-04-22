@@ -22,14 +22,15 @@ https://www.talkline.cn/product/golive
 
 ## 在线编辑编辑器
 ![img_20.png](image%2Fimg_20.png)
-https://km.wps.cn
+https://km.domain
 ### 公网
 ### 私网
 ![img_22.png](image%2Fimg_22.png)
 ![img_23.png](image%2Fimg_23.png)
 ### 开放平台
 ![img_21.png](image%2Fimg_21.png)
-https://solution.wps.cn
+![img_28.png](image%2Fimg_28.png)
+https://solution.domain
 
 
 

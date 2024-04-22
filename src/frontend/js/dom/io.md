@@ -1,6 +1,6 @@
 ```typescript
 
-let res  = await fetch('https://account.wps.cn/libs/img/v1/syncloginstatus/icon_warning.ec5b819b.svg')
+let res  = await fetch('https://account.domain/libs/img/v1/syncloginstatus/icon_warning.ec5b819b.svg')
 let blob = await res.blob();
 // 序列化
 let blobStr = await blob.text();

@@ -14,16 +14,15 @@ Sentry 为一套开源的应用监控和错误追踪的解决方案。这套解�
 2. cd onpremise
 3. 执行./install.sh    ./install.sh --skip-user-prompt
 4. docker compose up -d
-> 提示: 目前sentry已经是docker容器化部署;如果我们想要整体走一下容器化部署的话，需要上面的步骤在一个linux的容器中操作，然后把linux的容器打包成一个新的镜像;然后在sre中新建一个应用，然后推送过去。之前和鸿钧、王博沟通，1.linux容器打包成镜像比较大，2。新建应用相对复杂一些；目前部署在线上10.102.119.42机器中，二级域名https://sentry-zl.wps.cn/指向
+> 提示: 目前sentry已经是docker容器化部署;如果我们想要整体走一下容器化部署的话，需要上面的步骤在一个linux的容器中操作，然后把linux的容器打包成一个新的镜像;然后在sre中新建一个应用，然后推送过去。之前和鸿钧、王博沟通，1.linux容器打包成镜像比较大，2。新建应用相对复杂一些；目前部署在线上xx机器中，二级域名https://sentry-zl.domain/指向
    
 ### 当前sentry平台部署
-   线上服务器10.102.119.42   已调整为 10.193.52.6
    sentry代码部署在/home/self-hosted
    sentry代码部署在/home/kooper/onpremise/
 
 说明
-1. 登录线上服务器需要通过堡垒机ksop.wps.cn-- 堡垒机申请试用说明
-2. 线上地址https://sentry-zl.wps.cn/ https://sentry-zl2.wps.cn/
+1. 登录线上服务器需要通过堡垒机ksop.domain-- 堡垒机申请试用说明
+2. 线上地址https://sentry-zl.domain/ https://sentry-zl2.domain/
 ### 部署中的问题
    注意： 拷贝的时候需要先拷贝到本地vscode中格式化，再粘贴到远端，避免有中文空格等因素影响
 1. docker-compose版本过低（改用docker compose（docker自带的命令））
@@ -89,20 +88,20 @@ vim /etc/docker/daemon.json
 ```
 ## 使用
 ### 接入邮箱📮报警
-1. 配置完成后，即可进入页面https://sentry-zl.wps.cn/ 打开页面填入信息后即可进入sentry系统
+1. 配置完成后，即可进入页面https://sentry-zl.domain/ 打开页面填入信息后即可进入sentry系统
 ![img_16.png](image%2Fimg_16.png)
 
 2. config.yml配置
 ```bash
 mail.backend: 'smtp'
-mail.host: 'smtp.wps.cn'
+mail.host: 'smtp.domain'
 mail.port: 25
-mail.username: 'xuzhe1@wps.cn'
+mail.username: 'xuzhe1@domain'
 mail.password: '*********'
 mail.use-tls: false
 # mail.use-ssl: true
  # The email address to send on behalf of
- mail.from: 'xuzhe1@wps.cn' 
+ mail.from: 'xuzhe1@domain' 
 ```
 - mail.backend：邮件发送方式；
 - mail.host: 邮件发送域名 ，使用的哪个邮箱可以去该邮箱文档中找到 smtp 发送域名；
@@ -112,10 +111,10 @@ mail.use-tls: false
 - mail.use-tls：是否使用 tls 安全协议，这里填写 true 或 false，和 use-ssl 配置互斥；
 - mail.use-ssl：是否使用 ssl 安全协议，这里填写 true 或 false，和 use-tls 配置互斥；
 - mail.from：收到邮件时的发送人名称；
-之后可以进入页面测试邮件发送https://sentry-zl.wps.cn/manage/status/mail/
+之后可以进入页面测试邮件发送https://sentry-zl.domain/manage/status/mail/
 ### sentry通过https访问
 首先要修改 onpremise/sentry/config.yml system.url-prefix 配置，将其设置为我们访问的 Sentry 域名。 url-prefix 组成了项目的 DSN 地址，一定要保证格式正确。
-`system.internal-url-prefix: 'https://sentry-zl.wps.cn'`
+`system.internal-url-prefix: 'https://sentry-zl.domain'`
 然后是 /sentry/sentry.conf.py 文件下的 SSL/TLS 配置，将原来注释的部分全部打开。
 ```
 ###########
@@ -151,7 +150,7 @@ npm install --save @sentry/vue @sentry/tracing
 
 Sentry.init({
   // Sentry 项目的 dsn，可从项目设置中获取
-  dsn: 'https://23d1e539ef6c4cb6b14937fead1bf2ff@sentry-zl.wps.cn/2',
+  dsn: 'https://23d1e539ef6c4cb6b14937fead1bf2ff@sentry-zl.domain/2',
   // 初始参数配置内容
   integrations: [new Integrations.BrowserTracing(
       routingInstrumentation: Sentry.vueRouterInstrumentation(router),
@@ -201,7 +200,7 @@ token=c32f47d178064adeb3736742af42c34ebedf21aed43649bbb3d253a419e5c092
 
 
 [defaults]
-url=https://sentry-zl.wps.cn
+url=https://sentry-zl.domain
 org=kso
 project=kso-zl-pc
 

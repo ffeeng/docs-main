@@ -4,13 +4,13 @@
 ```bash
 npm install -g whistle
 w2 start -H 127.0.0.1 
-w2 start -n fengqian -w Feng@61759875
+w2 start -n xx -w xx
 ```
 ## 常用操作
 
 - 修改header
-km.wps.cn reqHeaders://{test-reqHeaders.json}
-km.wps.cn resHeaders://{test-reqHeaders.json}
+km.domain reqHeaders://{test-reqHeaders.json}
+km.domain resHeaders://{test-reqHeaders.json}
 ```test-reqHeaders.json
 ab: 111
 ```
@@ -20,15 +20,15 @@ ab: 111
 
 
 ## 替换文件
-local.zhiliao.wps.cn/1.html html://E:\xx\test\test.html
-local.zhiliao.wps.cn/1.js js://E:\xx\test\test.js
-local.zhiliao.wps.cn/1.css css://E:\xx\test\test.css
+local.zhiliao.domain/1.html html://E:\xx\test\test.html
+local.zhiliao.domain/1.js js://E:\xx\test\test.js
+local.zhiliao.domain/1.css css://E:\xx\test\test.css
 ## 跨域 gzip
 web.docer.wpscdn.cn resCors://*
 web.docer.wpscdn.cn enable://gzip
 
 ## 种Cookie
-wwo.wps.cn resCookies://weboffice_branch=opf-amd-func-fp-fulltext-exporter
+wwo.domain resCookies://weboffice_branch=opf-amd-func-fp-fulltext-exporter
 ## 修改接口返回值
 ``` test.json
 {
@@ -37,18 +37,18 @@ wwo.wps.cn resCookies://weboffice_branch=opf-amd-func-fp-fulltext-exporter
 "data": []
 }
 ```
-local.zhiliao.wps.cn replaceStatus://200
-https://local.zhiliao.wps.cn/a resBody://{test.json}
+local.zhiliao.domain replaceStatus://200
+https://local.zhiliao.domain/a resBody://{test.json}
 
 ## 接口延迟
-## https://local.zhiliao.wps.cn/api/zl/space/square/list  reqDelay://1000
-## https://local.zhiliao.wps.cn/api/zl/space/square/list  resDelay://1000
+## https://local.zhiliao.domain/api/zl/space/square/list  reqDelay://1000
+## https://local.zhiliao.domain/api/zl/space/square/list  resDelay://1000
 
 ## 修改js
 ``` test.js
 alert(1);
 ```
-local.zhiliao.wps.cn/1.js jsAppend://{test.js}
+local.zhiliao.domain/1.js jsAppend://{test.js}
 
 ## 修改css
 ```test.css
@@ -56,43 +56,43 @@ body{
 	background:red;
 }
 ```
-local.zhiliao.wps.cn/1.css cssAppend://{test.css}
+local.zhiliao.domain/1.css cssAppend://{test.css}
 
 
 ## 前端页面走本地代码，接口走后端
-km.wps.cn/api km.wps.cn/api
-km.wps.cn localhost:8080
+km.domain/api km.domain/api
+km.domain localhost:8080
 
 
 ## 使用本地页面
-local.zhiliao.wps.cn 127.0.0.1:8081
+local.zhiliao.domain 127.0.0.1:8081
 
 ## 打印日志
-testapi-zl.wps.cn log://
+testapi-zl.domain log://
 ## host
-120.92.124.158 testapi-zl.wps.cn
+120.92.124.158 testapi-zl.domain
 
 ## 修改ua
-local.zhiliao.wps.cn ua://Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+local.zhiliao.domain ua://Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
 
-/wos.wps.cn/ filter://hide
-local.zhiliao.wps.cn ua://{aa}
-local.zhiliao.wps.cn js://{js-test}
-local.zhiliao.wps.cn log://{log-test}
-local.zhiliao.wps.cn referer://https://vk.com/
-local.zhiliao.wps.cn reqHeaders://{req-headers}
+/wos.domain/ filter://hide
+local.zhiliao.domain ua://{aa}
+local.zhiliao.domain js://{js-test}
+local.zhiliao.domain log://{log-test}
+local.zhiliao.domain referer://https://vk.com/
+local.zhiliao.domain reqHeaders://{req-headers}
 
-## https://local.zhiliao.wps.cn/api  https://10.90.129.185:9002/api
+## https://local.zhiliao.domain/api  https://10.90.129.185:9002/api
 ## 跨域
 ``` test1.json
-origin: https://open-woa.wps.cn/
+origin: https://open-woa.domain/
 methods: POST
 headers: x-csrftoken
 credentials: true
 maxAge: 300000
 ```
-https://open-xz.wps.cn  resCors://{test1.json}
-https://plussvr.wps.cn resCors://https://local.zhiliao.wps.cn
+https://open-xz.domain  resCors://{test1.json}
+https://plussvr.domain resCors://https://local.zhiliao.domain
 
 
 ## 参考

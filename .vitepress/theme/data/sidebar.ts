@@ -123,9 +123,24 @@ export const sidebar: ThemeConfig['sidebar'] = {
 
   '/api/': [
     {
+      text: 'Vue',
+      items: [
+        { text: 'Application', link: '/api/index' },
+        {
+          text: 'vue',
+          link: '/api/vue'
+        } ,{
+          text: 'General',
+          link: '/api/vue'
+        }
+      ]
+    },
+    {
       text: '',
       items: [
-        { text: 'api', link: '/api/index' }
+        // { text: 'api', link: '/api/index' },
+        { text: 'vue入门', link: '/api/vue' },
+        // { text: 'api', link: '/api/index' }
       ]
     }
   ],
