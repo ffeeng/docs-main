@@ -129,7 +129,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     ],
 
     editLink: {
-      repo: 'ffeeng/note',
+      repo: 'ffeeng/note/src',
       text: '在 GitHub 上编辑此页面'
     },
 

@@ -87,7 +87,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
     }
   ],
 
-  '/business/': [
+/*  '/business/': [
     {
       text: '', items: [
         { text: '业务', link: '/business/index' }
@@ -103,7 +103,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
         { text: '工作流程', link: '/business/workflow' }
       ]
     }
-  ],
+  ],*/
 
   '/devops/': [
     {
@@ -123,9 +123,8 @@ export const sidebar: ThemeConfig['sidebar'] = {
 
   '/api/': [
     {
-      text: 'Vue',
+      text: 'Vue2',
       items: [
-        { text: 'Application', link: '/api/index' },
         {
           text: 'vue',
           link: '/api/vue'
@@ -136,7 +135,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
       ]
     },
     {
-      text: '',
+      text: 'vue3',
       items: [
         // { text: 'api', link: '/api/index' },
         { text: 'vue入门', link: '/api/vue' },
