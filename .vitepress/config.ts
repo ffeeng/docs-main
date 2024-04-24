@@ -94,6 +94,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
   ],
+  ignoreDeadLinks: true,
 
   themeConfig: {
     nav,
