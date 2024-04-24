@@ -24,3 +24,4 @@ This project requires Node.js to be `v14.0.0` or higher, because we use new Java
 
 If changes need to made for the theme, check out the [instructions for developing the theme alongside the docs](https://github.com/vuejs/vue-theme#developing-with-real-content).
 # docs-main
+# docs-main
