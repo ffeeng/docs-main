@@ -7,7 +7,7 @@
     "dev": "vitepress",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "deploy": " chmod +x script/deploy.js && script/deploy.js"
+    "deploy": "zx script/deploy.js"
   },
   "dependencies": {
     "@vue/repl": "^4.0.1",
