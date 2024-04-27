@@ -1,65 +1,14 @@
-# 这是前端内容
-
-## 基本业务
-### 写页面
-- 简单页面 vue + Dom
-- 表格 element-UI
-- 表单 element-UI
-- 路由 vue-router
-### 联调接口
-- axios
-### 国际化
-- i18N
-###  换肤
-- CSS样式层叠 变量 预编译
-- [前端换肤的N种方案](https://cloud.tencent.com/developer/article/1652624)
-### 兼容适配
-- 浏览器兼容性
-1. js polyfill.js
-2. css reset
-3. 设置浏览器私有属性指令
-- 屏幕适配
-1. ua解析 mobilejs
-2. 弹性布局
-3. em rem vw vh
-
-## 性能优化
-
-### 减少http请求
-- css,js文件合并
-- 精灵兔
-- 字体图标
-- base64图片
-### 域解析
-- dns-prefetch
-- link元素 prefetch preload
-### 减少体积
-- css压缩，js压缩
-- gzip
-### 缓存
-- eTag lastModified
-### CDN
-### css放header js放body后面
-### css别嵌套太深
-### virtualDom 减少重绘重排
-### 防抖节流，懒加载
-
-## 工程化业务
-### 创建 脚手架
-- vue-cli
-### 开发 webpack 跨域 热部署 mock
-- webpack
-- vite
-### 联调 热部署HMR
-- webpack
-### 测试
-- jest
-### 部署
-- jenkins
-- nginx
-
-## 可视化业务
-### 统计图，报表
-### 动画、特效
-
+# 优质前端内容汇总
+- [优质网站](https://interview.poetries.top/)
+- [编程经验干货](https://blog.poetries.top/archives/)
+- [业务博客](https://github.com/lecepin/blog)
+- [深入浅出浏览器渲染原理](https://github.com/ljianshu/Blog/issues/51)
+- [Cookie](https://github.com/mqyqingfeng/Blog/issues/157)
+- [深入理解浏览器的缓存机制](https://github.com/ljianshu/Blog/issues/23)
+- [九种跨域方式实现原理](https://juejin.cn/post/6844903767226351623)
+- [Web 实时推送技术的总结](https://juejin.cn/post/6844903796347240461)
+- [Chrome 浏览器渲染全过程](https://mp.weixin.qq.com/s?__biz=MzA4MjA1MDM3Ng==&mid=2450833054&idx=1&sn=f6250ff1eb4fca522e25324310c1c75c&chksm=886bb2b9bf1c3baf73c57fd28a6a3b2ffb343c181d465f038695023ca83f53e35fffac28e472#rd)
+- [Devops，CI/CD](https://mp.weixin.qq.com/s?__biz=MzA4MjA1MDM3Ng==&mid=2450830973&idx=1&sn=461b0e7a2984bb5325bba3236abf1e31&chksm=886bba5abf1c334cce9c1b2cc0be4cf52369289a8ba4f03206ccebeeab3db465b0a53baff1ad#rd)
+- [Nginx一网打尽：动静分离、压缩、缓存、黑白名单、跨域、高可用、性能优化](https://mp.weixin.qq.com/s?__biz=MzA4MjA1MDM3Ng==&mid=2450833054&idx=1&sn=f6250ff1eb4fca522e25324310c1c75c&chksm=886bb2b9bf1c3baf73c57fd28a6a3b2ffb343c181d465f038695023ca83f53e35fffac28e472#rd)
+- [sentry-接入](https://blog.poetries.top/2022/07/27/sentry-summary/)
 

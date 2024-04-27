@@ -1,3 +1,7 @@
+# 运维
+- [Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
+
+## 常用指令
 - 上传文件
   `scp dist-admin.zip root@10.8.58.42:/data/webroot `
 

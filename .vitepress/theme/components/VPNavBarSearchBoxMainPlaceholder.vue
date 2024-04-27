@@ -6,7 +6,7 @@
     </p>
     <p class="empty__tip">
       尝试搜索一下：<span
-        @click="emit('updateKeyword', '回调配置')"
+        @click="emit('updateKeyword', 'vue')"
         class="empty__recommend"
         >vue</span
       >

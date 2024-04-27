@@ -1,4 +1,4 @@
-[TOC]
+# postman
 
 ## 管理接口文档
 比较简单略
@@ -7,7 +7,7 @@
 - 全局变量
 - 环境变量
 - 取值{{url}}
-![image-20210127174523737](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2ea4xfbfj30ud0jrjsy.jpg)
+![img-20210127174523737](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2ea4xfbfj30ud0jrjsy.jpg)
 
 ## 发请求
 - Get
@@ -46,11 +46,10 @@ pm.test("Response time is less than 200ms", function () {
 排序顺序:接口排列顺序，由上往下执行
 
 ## 查看http报文
-![image-20210127173910873](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2e3o7w5tj312p0codip.jpg)
+![img-20210127173910873](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2e3o7w5tj312p0codip.jpg)
 ## 查看各语言版的请求
-![image-20210120194501601](/Users/zego/Library/Application Support/typora-user-images/image-20210120194501601.png)
 ## 不会查帮助
-![image-20210127174125445](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2e5xiibtj30u90mywhp.jpg)
+![img-20210127174125445](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2e5xiibtj30u90mywhp.jpg)
 
 
 ## 参考

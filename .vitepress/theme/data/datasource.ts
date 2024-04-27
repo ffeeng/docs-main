@@ -18,7 +18,6 @@ export const slugify = (str: string) =>
     .replace(/^(\d)/, '_$1')
     .toLowerCase()
 
-
 /**
  * 获取组类型
  * @param key 导航栏路径
@@ -35,7 +34,6 @@ function getNavType(key: string) {
   } else {
     return Search.GroupType.Frontend
   }
-
 }
 
 /**
@@ -59,12 +57,21 @@ export default function getSearchDataSource() {
   const pageItems: Search.Item[] = []
   const titleItems: Search.Item[] = []
   const textItems: Search.Item[] = []
-
   for (const [_, sidebarGroups] of Object.entries(sidebar)) {
     for (const sidebarGroup of sidebarGroups) {
       resolveGroup(sidebarGroup, pageItems, titleItems, textItems)
     }
   }
+  let index = {
+    text: 'index',
+    items: [
+      {
+        text: '首页',
+        link: '/index'
+      }
+    ]
+  }
+  resolveGroup(index, pageItems, titleItems, textItems)
   return pageItems.concat(titleItems, textItems)
 }
 
@@ -75,14 +82,12 @@ function resolveGroup(
   textItems: Search.Item[],
   parentTitle: string[] = [group.text!]
 ) {
-
   for (const item of group.items) {
     if (item.items) {
       resolveGroup(item, pageItems, titleItems, textItems, [
         ...parentTitle,
         item.text
       ])
-
     } else {
       if (item.link.startsWith('http')) continue
       let link = item.link
@@ -94,11 +99,14 @@ function resolveGroup(
       if (!link.endsWith('.md')) {
         link = link + '.md'
       }
-
+      let src= path.resolve(__dirname, '../../../src')
       const content = fs
-        .readFileSync('/Users/fengqian/WebstormProjects/docs-main/src'+link, {
-          encoding: 'utf-8'
-        })
+        .readFileSync(
+          src + link,
+          {
+            encoding: 'utf-8'
+          }
+        )
         // 文件引用内容补全
         .replace(
           /<!--\s?@include:\s?([^\s]+)\s?-->/g,
@@ -172,14 +180,12 @@ function resolveGroup(
           routeTitle: [...parentTitle, item.text].join(' > '),
           groupType: getNavType(link)
         })
-
       }
     }
   }
 }
 
 getSearchDataSource()
-
 
 /**
  * 获取独立无二的锚点（根据现有的锚点去判断）
@@ -188,7 +194,9 @@ getSearchDataSource()
  */
 function getUniqueAnchor(anchor: string, anchors: string[]) {
   if (anchors.includes(anchor)) {
-    const duplicateCount = anchors.filter(item => item.includes(anchor)).length
+    const duplicateCount = anchors.filter((item) =>
+      item.includes(anchor)
+    ).length
     const uniqueAnchor = `${anchor}-${duplicateCount}`
     anchors.push(uniqueAnchor)
     return uniqueAnchor
@@ -211,5 +219,3 @@ function getHashSuffix(title: string) {
     return slugify(title)
   }
 }
-
-

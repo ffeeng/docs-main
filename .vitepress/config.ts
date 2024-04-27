@@ -9,16 +9,41 @@ import { fileURLToPath, URL } from 'node:url'
 import { sidebar } from './theme/data/sidebar'
 import getSearchDataSource from './theme/data/datasource'
 // import getSearchDataSource from './utils/getSearchDataSource'
+let a="file:///"+path.resolve(__dirname,'theme/components/VPNavBarSearch.vue')
+// debugger
+// D:\webStormProject\docs-main\.vitepress\theme\components\VPNavBarSearch.vue
 
 const nav: ThemeConfig['nav'] = [
-  // {
-  //   text: '文档',
-  //   activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
-  //   items: [
-  //     { text: '前端', link: '/frontend/html/link' },
-  //     { text: '后端', link: '/backend' },
-  //   ]
-  // },
+  {
+    text: '首页',
+    link: '/'
+  },
+  {
+    text: '工具',
+    activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
+    items: [
+      {
+        text: '资源工具',
+        link: 'https://nav.poetries.top/'
+      },
+      {
+        text: 'cheatSheet',
+        link: 'https://devhints.io/'
+      },
+      {
+        text: 'feHelper',
+        link: 'https://www.baidufe.com/fehelper/regexp/index.html'
+      },
+      {
+        text: '正则可视化',
+        link: 'https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24'
+      },
+      {
+        text: 'babelRepl',
+        link: 'https://www.babeljs.cn/repl#?browsers=&build=&builtIns=false&corejs=false&spec=false&loose=false&code_lz=IYZwngdgxgBAZgV2gFwJYHsI2MAFASgG8AoGM7Ad2FWRggFMKYAFAJ3QFtUR7dX6Q6ADYA3egF4AfCXKyYPZABVUHeugTJcBKTLl6omQUPoA6IegDmuAIz5SeufyNiC9vQF8ANNYAMfu7Ludu7EpDiuBhBGpuZWAEx2QA&debug=false&forceAllTransforms=false&modules=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=&prettier=false&targets=&version=7.24.4&externalPlugins=&assumptions=%7B%7D'
+      }
+    ]
+  },
   {
     text: '前端',
     activeMatch: `^/frontend/`,
@@ -38,24 +63,12 @@ const nav: ThemeConfig['nav'] = [
     text: '运维',
     activeMatch: `^/devops/`,
     link: '/devops/'
-  },
+  }
   // {
-  //   text: '测试',
-  //   activeMatch: `^/test/`,
-  //   link: '/test/'
-  // },
-  {
-    text: 'API',
-    activeMatch: `^/api/`,
-    link: '/api/'
-  },
-  {
-    text: 'Playground',
-    link: 'https://play.vuejs.org'
-  },
+  //   text: 'Playground',
+  //   link: 'https://play.vuejs.org'
+  // }
 ]
-
-
 
 // Placeholder of the i18n config for @vuejs-translations.
 const i18n: ThemeConfig['i18n'] = {
@@ -73,7 +86,7 @@ const searchDataSourcePlugin = function () {
         return resolvedVirtualModuleId
       }
     },
-    load(id: string) {
+    async load(id: string) {
       if (id === resolvedVirtualModuleId) {
         const data = getSearchDataSource()
         console.log(data)
@@ -91,9 +104,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
 
-  head: [
-    ['meta', { name: 'theme-color', content: '#3c8772' }],
-  ],
+  head: [['meta', { name: 'theme-color', content: '#3c8772' }]],
   ignoreDeadLinks: true,
 
   themeConfig: {
@@ -102,13 +113,13 @@ export default defineConfigWithTheme<ThemeConfig>({
     // Placeholder of the i18n config for @vuejs-translations.
     i18n,
 
-    localeLinks: [
-      {
-        link: 'https://cn.vuejs.org',
-        text: '简体中文',
-        repo: 'https://github.com/vuejs-translations/docs-zh-cn'
-      }
-    ],
+    // localeLinks: [
+    //   {
+    //     link: 'https://cn.vuejs.org',
+    //     text: '简体中文',
+    //     repo: 'https://github.com/vuejs-translations/docs-zh-cn'
+    //   }
+    // ],
 
     algolia: {
       indexName: 'vuejs',
@@ -124,12 +135,10 @@ export default defineConfigWithTheme<ThemeConfig>({
       placement: 'vuejsorg'
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/' },
-    ],
+    // socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/' }],
 
     editLink: {
-      repo: 'ffeeng/note/src',
+      repo: 'ffeeng/docs-main',
       text: '在 GitHub 上编辑此页面'
     },
 
@@ -142,8 +151,6 @@ export default defineConfigWithTheme<ThemeConfig>({
     }
   },
 
-
-
   markdown: {
     theme: 'github-dark',
     config(md) {
@@ -153,15 +160,25 @@ export default defineConfigWithTheme<ThemeConfig>({
   },
 
   vite: {
-    plugins: [
-      searchDataSourcePlugin()
-    ],
+    plugins: [searchDataSourcePlugin()],
     resolve: {
       alias: [
         {
           find: /^.*\/VPNavBarSearch\.vue$/,
           replacement: fileURLToPath(
-            new URL('/Users/fengqian/WebstormProjects/docs-main/.vitepress/theme/components/VPNavBarSearch.vue', import.meta.url)
+            new URL(
+              "file:///"+path.resolve(__dirname,'theme/components/VPNavBarSearch.vue'),
+              import.meta.url
+            )
+          )
+        },
+        {
+          find: /^.*\/VPNavBarTitle\.vue$/,
+          replacement: fileURLToPath(
+            new URL(
+              "file:///"+path.resolve(__dirname,'theme/components/VPNavBarTitle.vue'),
+              import.meta.url
+            )
           )
         }
       ]

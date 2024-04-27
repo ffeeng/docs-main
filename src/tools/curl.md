@@ -1,4 +1,4 @@
-[TOC]
+# curl
 
 ## curl
 和服务器进行传输数据的工具，支持的协议有：
@@ -51,10 +51,9 @@ curl --location --request DELETE '127.0.0.1:3000/v3/util/userInfo'
 
 ## 生成curl工具
 - chrome devtool
-![image-20210120194544993](https://tva1.sinaimg.cn/large/008eGmZEly1gmuefwv9zsj30j40bmtes.jpg)
+![img-20210120194544993](https://tva1.sinaimg.cn/large/008eGmZEly1gmuefwv9zsj30j40bmtes.jpg)
 - postman
-![image-20210120194352840](https://tva1.sinaimg.cn/large/008eGmZEly1gmuefukxaxj310309twfj.jpg)
-![image-20210120194501601](/Users/zego/Library/Application Support/typora-user-images/image-20210120194501601.png)
+![img-20210120194352840](https://tva1.sinaimg.cn/large/008eGmZEly1gmuefukxaxj310309twfj.jpg)
 
 ## 参考
 - [curl tutorial](https://curl.se/docs/manual.html)
