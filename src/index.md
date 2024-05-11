@@ -4,6 +4,7 @@
 
 - [查代码](https://github.com/ruanyf/jstraining/tree/master/demos)
 - [查书籍](https://github.com/ruanyf/free-books?tab=readme-ov-file)
+- [更新博客](http://43.155.20.143:8080/)
 
 ## 常用网站导航
 
