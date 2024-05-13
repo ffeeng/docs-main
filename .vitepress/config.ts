@@ -39,6 +39,10 @@ const nav: ThemeConfig['nav'] = [
         link: 'https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24'
       },
       {
+        text:'执行过程可视化',
+        link:'https://pythontutor.com/render.html#mode=display'
+      },
+      {
         text: 'babelRepl',
         link: 'https://www.babeljs.cn/repl#?browsers=&build=&builtIns=false&corejs=false&spec=false&loose=false&code_lz=IYZwngdgxgBAZgV2gFwJYHsI2MAFASgG8AoGM7Ad2FWRggFMKYAFAJ3QFtUR7dX6Q6ADYA3egF4AfCXKyYPZABVUHeugTJcBKTLl6omQUPoA6IegDmuAIz5SeufyNiC9vQF8ANNYAMfu7Ludu7EpDiuBhBGpuZWAEx2QA&debug=false&forceAllTransforms=false&modules=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=&prettier=false&targets=&version=7.24.4&externalPlugins=&assumptions=%7B%7D'
       }
