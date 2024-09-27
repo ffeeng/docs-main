@@ -1,28 +1,19 @@
-# vuejs.org
 
-## Contributing
+#安装证书工具：
+curl https://get.acme.sh | sh; apt install socat -y || yum install socat -y; ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 
-This site is built with [VitePress](https://github.com/vuejs/vitepress) and depends on [@vue/theme](https://github.com/vuejs/vue-theme). Site content is written in Markdown format located in `src`. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
+#三种方式任选其中一种，申请失败则更换方式
+#申请证书方式1：
+~/.acme.sh/acme.sh  --issue -d 43.155.20.143 --standalone -k ec-256 --force --insecure
+#申请证书方式2：
+~/.acme.sh/acme.sh --register-account -m "${RANDOM}@chacuo.net" --server buypass --force --insecure && ~/.acme.sh/acme.sh  --issue -d 你的域名 --standalone -k ec-256 --force --insecure --server buypass
+#申请证书方式3：
+~/.acme.sh/acme.sh --register-account -m "${RANDOM}@chacuo.net" --server zerossl --force --insecure && ~/.acme.sh/acme.sh  --issue -d 你的域名 --standalone -k ec-256 --force --insecure --server zerossl
 
-For local development, [pnpm](https://pnpm.io/) is preferred as package manager:
-
-```bash
-pnpm i
-pnpm run dev
-```
-
-This project requires Node.js to be `v14.0.0` or higher, because we use new JavaScript features in our code, such as optional chaining.
+#安装证书：
+~/.acme.sh/acme.sh --install-cert -d 你的域名 --ecc --key-file /etc/x-ui/server.key --fullchain-file /etc/x-ui/server.crt
 
 
-## Working on the content
+AS132203
+curl https://get.acme.sh | sh;  yum install socat -y; ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 
-- See VitePress docs on supported [Markdown Extensions](https://vitepress.dev/guide/markdown) and the ability to [use Vue syntax inside markdown](https://vitepress.dev/guide/using-vue).
-
-- See the [Writing Guide](https://github.com/vuejs/docs/blob/main/.github/contributing/writing-guide.md) for our rules and recommendations on writing and maintaining documentation content.
-
-## Working on the theme
-
-If changes need to made for the theme, check out the [instructions for developing the theme alongside the docs](https://github.com/vuejs/vue-theme#developing-with-real-content).
-# docs-main
-# docs-main
-# docs-main

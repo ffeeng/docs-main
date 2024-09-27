@@ -60,6 +60,11 @@ const nav: ThemeConfig['nav'] = [
     link: '/business/'
   },
   {
+    text: '面试',
+    activeMatch: `^/interview/`,
+    link: '/interview/'
+  },
+  {
     text: '运维',
     activeMatch: `^/devops/`,
     link: '/devops/'
