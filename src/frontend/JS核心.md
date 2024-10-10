@@ -1,7 +1,6 @@
 
 # 原型链
-![prototype.png](img%2Fprototype.png)
-- [docs-class-extends](https://www.bookstack.cn/read/es6-3rd/spilt.4.docs-class-extends.md#c7nnij)
+![img.png](prototype.png)
   
 
 
@@ -37,7 +36,7 @@
 
 - 事件循环六个阶段
 
-  ![image-20210308174640516](https://tva1.sinaimg.cn/large/008eGmZEly1gocn3up72mj30lb0cyjrt.jpg)
+ ![img.png](eventloop.png)
 
 - 参考
 

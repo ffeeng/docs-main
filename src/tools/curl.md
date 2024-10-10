@@ -51,9 +51,9 @@ curl --location --request DELETE '127.0.0.1:3000/v3/util/userInfo'
 
 ## 生成curl工具
 - chrome devtool
-![img-20210120194544993](https://tva1.sinaimg.cn/large/008eGmZEly1gmuefwv9zsj30j40bmtes.jpg)
+![img_1.png](img/curl1.png)
 - postman
-![img-20210120194352840](https://tva1.sinaimg.cn/large/008eGmZEly1gmuefukxaxj310309twfj.jpg)
+![img.png](img/curl2.png)
 
 ## 参考
 - [curl tutorial](https://curl.se/docs/manual.html)

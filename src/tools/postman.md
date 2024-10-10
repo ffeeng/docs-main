@@ -7,7 +7,7 @@
 - 全局变量
 - 环境变量
 - 取值{{url}}
-![img-20210127174523737](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2ea4xfbfj30ud0jrjsy.jpg)
+![img.png](img/postman1.png)
 
 ## 发请求
 - Get
@@ -46,10 +46,10 @@ pm.test("Response time is less than 200ms", function () {
 排序顺序:接口排列顺序，由上往下执行
 
 ## 查看http报文
-![img-20210127173910873](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2e3o7w5tj312p0codip.jpg)
+![img.png](img/postman2.png)
 ## 查看各语言版的请求
 ## 不会查帮助
-![img-20210127174125445](https://tva1.sinaimg.cn/large/008eGmZEgy1gn2e5xiibtj30u90mywhp.jpg)
+![img.png](img/postman3.png)
 
 
 ## 参考

@@ -1,7 +1,5 @@
 [TOC]
-![image-20210220153221693](https://tva1.sinaimg.cn/large/008eGmZEgy1gnwd9trbjlj30r00cugm3.jpg)
-![时序图](https://tva1.sinaimg.cn/large/008eGmZEgy1gnwd9m4bejj30y40u07an.jpg)
-
+![img.png](../image/img_29.png)
 
 
 ### [web直播](https://doc-zh.zego.im/zh/7638.html)
