@@ -1,9 +1,10 @@
-# 技术总结1
+# 技术总结
 技术总结主要解决快速上手、快速查文档，从而快速解决问题，而不是不明方向地去试错
 
 
 - [查代码](https://github.com/ruanyf/jstraining/tree/master/demos)
 - [查书籍](https://github.com/ruanyf/free-books?tab=readme-ov-file)
+- [更新博客](http://43.155.20.143:8080/)
 
 ## 常用网站导航
 
